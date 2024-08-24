@@ -1,8 +1,8 @@
 #!/bin/sh
 mount -o nobrowse -t apfs /dev/disk1s5 /opt/ExtenalDisk
 
-rm -rf /opt/Workspace/Fonts/Backups/MacOS/*
-cp -a /opt/ExtenalDisk/System/Library/Fonts/. /opt/Workspace/Fonts/Backups/MacOS/
+rm -rf /opt/Workspaces/Fonts/Backups/MacOS/*
+cp -a /opt/ExtenalDisk/System/Library/Fonts/. /opt/Workspaces/Fonts/Backups/MacOS/
 
 rm /opt/ExtenalDisk/System/Library/Fonts/AppleSDGothicNeo.ttc
 rm /opt/ExtenalDisk/System/Library/Fonts/Supplemental/AppleGothic.ttf
@@ -67,10 +67,12 @@ rm -r $(dirname $(dirname $(find /opt/ExtenalDisk/System/Library/AssetsV2/ -inam
 rm -r $(dirname $(dirname $(find /opt/ExtenalDisk/System/Library/AssetsV2/ -iname '*.ttc')))
 rm -r $(dirname $(dirname $(find /opt/ExtenalDisk/System/Library/AssetsV2/ -iname '*.otf')))
 
-cp -f /opt/Workspace/Fonts/MacOS/*.ttc /opt/ExtenalDisk/System/Library/Fonts/
-cp -f /opt/Workspace/Fonts/MacOS/*.ttf /opt/ExtenalDisk/System/Library/Fonts/
-cp -f /opt/Workspace/Fonts/MacOS/Supplemental/*.ttc /opt/ExtenalDisk/System/Library/Fonts/Supplemental/
-cp -f /opt/Workspace/Fonts/MacOS/Supplemental/*.ttf /opt/ExtenalDisk/System/Library/Fonts/Supplemental/
+cp -f /opt/Workspaces/Fonts/MacOS/*.ttc /opt/ExtenalDisk/System/Library/Fonts/
+cp -f /opt/Workspaces/Fonts/MacOS/*.ttf /opt/ExtenalDisk/System/Library/Fonts/
+cp -f /opt/Workspaces/Fonts/MacOS/Supplemental/*.ttc /opt/ExtenalDisk/System/Library/Fonts/Supplemental/
+cp -f /opt/Workspaces/Fonts/MacOS/Supplemental/*.ttf /opt/ExtenalDisk/System/Library/Fonts/Supplemental/
+
+cp -f /opt/Workspaces/Images/EGGxQ.jpg /opt/ExtenalDisk/System/Library/PrivateFrameworks/SystemDesktopAppearance.framework/Versions/A/Resources/DefaultBackground.jpg
 
 rm -r /opt/ExtenalDisk/System/Applications/Chess.app
 rm -r /opt/ExtenalDisk/System/Applications/News.app
