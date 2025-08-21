@@ -98,10 +98,7 @@ rm -r /opt/ExtenalDisk/System/Applications/Dictionary.app
 rm -r /opt/ExtenalDisk/System/Applications/Clock.app
 rm -r /opt/ExtenalDisk/System/Applications/Calendar.app
 rm -r /opt/ExtenalDisk/System/Library/CoreServices/Applications/Feedback\ Assistant.app
-rm -r /opt/ExtenalDisk/System/Applications/Automator.app
-rm -r /opt/ExtenalDisk/System/Applications/Shortcuts.app
 rm -r /opt/ExtenalDisk/System/Applications/Siri.app
-rm -r /opt/ExtenalDisk/System/Applications/Time\ Machine.app
 rm -r /opt/ExtenalDisk/Applications/Utilities/Feedback\ Assistant.app
 rm -r /opt/ExtenalDisk/System/Applications/Utilities/AirPort\ Utility.app
 rm -r /opt/ExtenalDisk/System/Applications/Utilities/Audio\ MIDI\ Setup.app
@@ -109,26 +106,16 @@ rm -r /opt/ExtenalDisk/System/Applications/Utilities/ColorSync\ Utility.app
 rm -r /opt/ExtenalDisk/System/Applications/Utilities/Digital\ Color\ Meter.app
 rm -r /opt/ExtenalDisk/System/Applications/Utilities/Grapher.app
 rm -r /opt/ExtenalDisk/System/Applications/Utilities/VoiceOver\ Utility.app
-rm -r /opt/ExtenalDisk/System/Applications/Utilities/Migration\ Assistant.app
-rm -r /opt/ExtenalDisk/System/Applications/Utilities/Boot\ Camp\ Assistant.app
 rm -r /opt/ExtenalDisk/System/Applications/Image\ Capture.app
-rm -r /opt/ExtenalDisk/System/Applications/Mission\ Control.app
-rm -r /opt/ExtenalDisk/System/Applications/Utilities/Bluetooth\ File\ Exchange.app
 rm -r /opt/ExtenalDisk/System/Applications/Mail.app
 rm -r /opt/ExtenalDisk/System/Applications/Weather.app
 rm -r /opt/ExtenalDisk/System/Applications/TextEdit.app
-rm -r /opt/ExtenalDisk/System/Applications/Utilities/Console.app
-rm -r /opt/ExtenalDisk/System/Applications/Utilities/Disk\ Utility.app
-rm -r /opt/ExtenalDisk/System/Applications/Utilities/Keychain\ Access.app
-rm -r /opt/ExtenalDisk/System/Applications/Utilities/Script\ Editor.app
-rm -r /opt/ExtenalDisk/System/Applications/Utilities/System\ Information.app
-rm -r /opt/ExtenalDisk/System/Applications/Font\ Book.app
 
 cd $(find /private/var/folders -name com.apple.dock.launchpad)/db
 
-sqlite3 db "Delete From items Where rowid In (Select item_id From apps Where title In ('Chess','News','QuickTime Player','Stocks','TV','Home','Calculator','Notes','Voice Memos','Contacts','Freeform','Reminders','Maps','FaceTime','Stickies','Photo Booth','Messages','Find My','Dictionary','Clock','Calendar','Feedback Assistant','Automator','Shortcuts','Siri','Time Machine','AirPort Utility','Audio MIDI Setup','ColorSync Utility','Digital Color Meter','Grapher','VoiceOver Utility','Migration Assistant','Boot Camp Assistant','Image Capture','Mission Control','Bluetooth File Exchange','Mail','Weather','TextEdit','Console','Disk Utility','Keychain Access','Script Editor','System Information','Font Book','国际象棋','股市','查找','天气','备忘录','图像捕捉','家庭','无边记','文本编辑','邮件','词典','通讯录','时间机器','字体册','FaceTime通话','快捷指令','地图','调度中心','便笺','信息','计算器','语音备忘录','提醒事项','时钟','自动操作','日历','AirPort实用工具','旁白实用工具','音频MIDI设置','系统信息','钥匙串访问','迁移助手','脚本编辑器','色彩同步实用工具','控制台','磁盘工具','蓝牙文件交换','启动转换助理','数码测色计'))"
-sqlite3 db "Delete From image_cache Where item_id In (Select item_id From apps Where title In ('Chess','News','QuickTime Player','Stocks','TV','Home','Calculator','Notes','Voice Memos','Contacts','Freeform','Reminders','Maps','FaceTime','Stickies','Photo Booth','Messages','Find My','Dictionary','Clock','Calendar','Feedback Assistant','Automator','Shortcuts','Siri','Time Machine','AirPort Utility','Audio MIDI Setup','ColorSync Utility','Digital Color Meter','Grapher','VoiceOver Utility','Migration Assistant','Boot Camp Assistant','Image Capture','Mission Control','Bluetooth File Exchange','Mail','Weather','TextEdit','Console','Disk Utility','Keychain Access','Script Editor','System Information','Font Book','国际象棋','股市','查找','天气','备忘录','图像捕捉','家庭','无边记','文本编辑','邮件','词典','通讯录','时间机器','字体册','FaceTime通话','快捷指令','地图','调度中心','便笺','信息','计算器','语音备忘录','提醒事项','时钟','自动操作','日历','AirPort实用工具','旁白实用工具','音频MIDI设置','系统信息','钥匙串访问','迁移助手','脚本编辑器','色彩同步实用工具','控制台','磁盘工具','蓝牙文件交换','启动转换助理','数码测色计'))"
-sqlite3 db "Delete From apps Where title In ('Chess','News','QuickTime Player','Stocks','TV','Home','Calculator','Notes','Voice Memos','Contacts','Freeform','Reminders','Maps','FaceTime','Stickies','Photo Booth','Messages','Find My','Dictionary','Clock','Calendar','Feedback Assistant','Automator','Shortcuts','Siri','Time Machine','AirPort Utility','Audio MIDI Setup','ColorSync Utility','Digital Color Meter','Grapher','VoiceOver Utility','Migration Assistant','Boot Camp Assistant','Image Capture','Mission Control','Bluetooth File Exchange','Mail','Weather','TextEdit','Console','Disk Utility','Keychain Access','Script Editor','System Information','Font Book','国际象棋','股市','查找','天气','备忘录','图像捕捉','家庭','无边记','文本编辑','邮件','词典','通讯录','时间机器','字体册','FaceTime通话','快捷指令','地图','调度中心','便笺','信息','计算器','语音备忘录','提醒事项','时钟','自动操作','日历','AirPort实用工具','旁白实用工具','音频MIDI设置','系统信息','钥匙串访问','迁移助手','脚本编辑器','色彩同步实用工具','控制台','磁盘工具','蓝牙文件交换','启动转换助理','数码测色计')"
+sqlite3 db "Delete From items Where rowid In (Select item_id From apps Where title In ('Chess','News','QuickTime Player','Stocks','TV','Home','Calculator','Notes','Voice Memos','Contacts','Freeform','Reminders','Maps','FaceTime','Stickies','Photo Booth','Messages','Find My','Dictionary','Clock','Calendar','Feedback Assistant','Siri','AirPort Utility','Audio MIDI Setup','ColorSync Utility','Digital Color Meter','Grapher','VoiceOver Utility','Image Capture','Mail','Weather','TextEdit','查找','天气','备忘录','图像捕捉','家庭','无边记','文本编辑','邮件','词典','通讯录','FaceTime通话','地图','便笺','信息','计算器','语音备忘录','提醒事项','时钟','日历','AirPort实用工具','旁白实用工具','音频MIDI设置','色彩同步实用工具','数码测色计'))"
+sqlite3 db "Delete From image_cache Where item_id In (Select item_id From apps Where title In ('Chess','News','QuickTime Player','Stocks','TV','Home','Calculator','Notes','Voice Memos','Contacts','Freeform','Reminders','Maps','FaceTime','Stickies','Photo Booth','Messages','Find My','Dictionary','Clock','Calendar','Feedback Assistant','Siri','AirPort Utility','Audio MIDI Setup','ColorSync Utility','Digital Color Meter','Grapher','VoiceOver Utility','Image Capture','Mail','Weather','TextEdit','查找','天气','备忘录','图像捕捉','家庭','无边记','文本编辑','邮件','词典','通讯录','FaceTime通话','地图','便笺','信息','计算器','语音备忘录','提醒事项','时钟','日历','AirPort实用工具','旁白实用工具','音频MIDI设置','色彩同步实用工具','数码测色计'))"
+sqlite3 db "Delete From apps Where title In ('Chess','News','QuickTime Player','Stocks','TV','Home','Calculator','Notes','Voice Memos','Contacts','Freeform','Reminders','Maps','FaceTime','Stickies','Photo Booth','Messages','Find My','Dictionary','Clock','Calendar','Feedback Assistant','Siri','AirPort Utility','Audio MIDI Setup','ColorSync Utility','Digital Color Meter','Grapher','VoiceOver Utility','Image Capture','Mail','Weather','TextEdit','查找','天气','备忘录','图像捕捉','家庭','无边记','文本编辑','邮件','词典','通讯录','FaceTime通话','地图','便笺','信息','计算器','语音备忘录','提醒事项','时钟','日历','AirPort实用工具','旁白实用工具','音频MIDI设置','色彩同步实用工具','数码测色计')"
 sqlite3 db "Delete From groups Where title In ('Games','Other','游戏','其他')"
 
 killall Dock
